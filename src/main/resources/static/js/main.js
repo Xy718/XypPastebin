@@ -1,10 +1,13 @@
 $('#sendbutton').click(function () {
-    console.log("send1!");
     //发送数据
+	var data='{"paste":'+$('#message')[0].value+'}';
+	console.log(data);
     $.ajax({
         url:'/',
-        method:'POST',
-        data:new Json,
+        type:'POST',
+        dataType:'JSON',
+        contentType: 'application/json',
+        data:JSON.parse(JSON.stringify(data)),
         success:function (data,status) {
             
         }
