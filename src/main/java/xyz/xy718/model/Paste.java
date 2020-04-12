@@ -25,7 +25,7 @@ public class Paste {
 	@Column(nullable = false)
 	private String paste;
 	
-	@Column(nullable = false)
+	@Column(nullable = false,unique = true)
 	private String link;
 	
 	
